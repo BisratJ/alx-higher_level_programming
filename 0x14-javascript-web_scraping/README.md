@@ -1,65 +1,62 @@
-# JavaScript - Web scraping
+# 0x14. Javascript - Web scraping
 
-[![js-semistandard-style](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg)](https://github.com/standard/semistandard)
+This project involved practicing file I/O on Node.js and using the NPM request
+framework to interact with the [Star Wars](https://swapi.co/),
+[JSONplaceholder](https://jsonplaceholder.typicode.com), and
+[Twitter](https://developer.twitter.com/en/docs/api-reference-index) API's.
 
-This project contains some tasks for learning how to perform web scraping with **JavaScript**.
+## Tasks :page_with_curl:
 
-## Tasks To Complete
+* **0. Readme**
+  * [0-readme.js](./0-readme.js): JavaScript script that reads and prints the
+  contents of a file.
+  * Usage: `./0-readme.js <file path>`.
 
-+ [x] 0. Readme<br/>_**[0-readme.js](0-readme.js)**_ contains a script that reads and prints the content of a file.
-  + Requirements:
-    + The first argument is the file path.
-    + The content of the file must be read in `utf-8`.
-    + If an error occurred during the reading, print the error object.
+* **1. Write me**
+  * [1-writeme.js](./1-writeme.js): JavaScript script that writes a string to a
+  file.
+  * Usage: `./1-writeme.js <file path> <string to write>`.
 
-+ [x] 1. Write me<br/>_**[1-writeme.js](1-writeme.js)**_ contains a script that writes a string to a file.
-  + Requirements:
-    + The first argument is the file path.
-    + The second argument is the string to write.
-    + The content of the file must be written in `utf-8`.
-    + If an error occurred during while writing, print the error object.
+* **2. Status code**
+  * [2-statuscode.js](./2-statuscode.js): JavaScript script that displays the
+  stauts code of a `GET` request using the `request` framework.
+  * Usage: `./2-statuscode.js <URL to GET>`.
+  * Output: `code: <status code>`.
 
-+ [x] 2. Status code<br/>_**[2-statuscode.js](2-statuscode.js)**_ contains a script that displays the status code of a `GET` request.
-  + Requirements:
-    + The first argument is the URL to request (`GET`).
-    + The status code must be printed like this: `code: <status code>`.
-    + You must use the module `request`.
+* **3. Star wars movie title**
+  * [3-starwars_title.js](./3-starwars_title.js): JavaScript script that uses the
+  Star Wars API to print the title of the Star Wars movie with a given integer episode
+  number.
+  * Usage: `./3-starwars_title.js <3-starwars_title.js>`.
 
-+ [x] 3. Star wars movie title<br/>_**[3-starwars_title.js](3-starwars_title.js)**_ contains a script that prints the title of a Star Wars movie where the episode number matches a given integer.
-  + Requirements:
-    + The first argument is the movie ID.
-    + You must use the [Star wars API](https://swapi-api.hbtn.io/) with the endpoint `https://swapi-api.hbtn.io/api/films/:id`.
-    + You must use the module `request`.
+* **4. Star wars Wedge Antilles**
+  * [4-starwars_count.js](./4-starwars_count.js): JavaScript script that uses the
+  Star Wars API to print the number of movies featuring the character "Wedge Antilles".
+  * Usage: `./4-starwars_count.js http://swapi.co/api/films/`.
 
-+ [x] 4. Star wars Wedge Antilles<br/>_**[4-starwars_count.js](4-starwars_count.js)**_ contains a script that prints the number of movies where the character "Wedge Antilles" is present.
-  + Requirements:
-    + The first argument is the API URL of the [Star wars API](https://swapi-api.hbtn.io/): `https://swapi-api.hbtn.io/api/films/`.
-    + Wedge Antilles is character ID `18` - your script **must** use this ID for filtering the result of the API.
-    + You must use the module `request`.
+* **5. Loripsum**
+  * [5-request_store.js](./5-request_store.js): JavaScript script that stores the
+  contents of a webpage in a file.
+  * Usage: `./5-request_store.js <URL to get> <file path to store content in>`.
 
-+ [x] 5. Loripsum<br/>_**[5-request_store.js](5-request_store.js)**_ contains a script that gets the contents of a webpage and stores it in a file.
-  + Requirements:
-    + The first argument is the URL to request.
-    + The second argument the file path to store the body response.
-    + The file must be UTF-8 encoded.
-    + You must use the module `request`.
+* **6. How many completed?**
+  * [6-completed_tasks.js](./6-completed_tasks.js): JavaScript script that uses the
+  JSONPlaceholder API to compute the number of tasks completed per user ID.
+  * Usage: `./6-completed_tasks.js https://jsonplaceholder.typicode.com/todos`.
 
-+ [x] 6. How many completed?<br/>_**[6-completed_tasks.js](6-completed_tasks.js)**_ contains a script that computes the number of tasks completed by user id.
-  + Requirements:
-    + The first argument is the API URL: `https://jsonplaceholder.typicode.com/todos`.
-    + Only print users with completed task.
-    + You must use the module `request`.
+* **7. Who was playing in this movie?**
+  * [100-starwars_characters.js](./100-starwars_characters.js): JavaScript script
+  that uses the Star Wars API to print all characters featured in a given movie.
+  * Usage: `./100-starwars_characters.js <movie ID>`.
 
-+ [x] 7. Who was playing in this movie?<br/>_**[100-starwars_characters.js](100-starwars_characters.js)**_ contains a script that prints all characters of a Star Wars movie.
-  + Requirements:
-    + The first argument is the Movie ID - example: `3` = "Return of the Jedi".
-    + Display one character name by line.
-    + You must use the [Star wars API](https://swapi-api.hbtn.io/).
-    + You must use the module `request`.
+* **8. Right order**
+  * [101-starwars_characters.js](./101-starwars_characters.js): JavaScript script
+  that uses the Star Wars API to print all characters featured in a given movie in
+  the same order as they are listed in the `characters` list of the `/films/` response.
+  * Usage: `./101-starwars_characters.js <movie ID>`.
 
-+ [x] 8. Right order<br/>_**[101-starwars_characters.js](101-starwars_characters.js)**_ contains a script that prints all characters of a Star Wars movie.
-  + Requirements:
-    + The first argument is the Movie ID - example: `3` = "Return of the Jedi".
-    + Display one character name by line **in the same order of the list "characters" in the /`films/` response**.
-    + You must use the [Star wars API](https://swapi-api.hbtn.io/).
-    + You must use the module `request`.
+* **9. Twitter Auth**
+  * [102-search_twitter.js](./102-search_twitter.js): JavaScript script that sends
+  a search request to the Twitter API with a given search string.
+  * Usage: `./102-search_twitter.js <consumer  key> <consumer secret> <search string>.
+  * Outputs 5 results in the format `[<Tweet ID>] <Tweet text> by <Tweet owner name>`.
