@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Use requests package to make a get request to given URL
+"""
+Python script that fetches an URL with requests package
 """
 import requests
 
+
 if __name__ == "__main__":
-    url = "https://intranet.hbtn.io/status"
-    r = requests.get(url)
-    print("Body response:")
-    print("\t- type: {}".format(type(r.text)))
-    print("\t- content: {}".format(r.text))
+    r = requests.get('https://alx-intranet.hbtn.io/status')
+    t = r.text
+    print('Body response:\n\t- type: {}\n\t- content: {}'.format(type(t), t))
