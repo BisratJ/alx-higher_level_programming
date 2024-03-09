@@ -1,6 +1,4 @@
 #!/usr/bin/node
-const addMeFunc = function (number, theFunction) {
+exports.addMeMaybe = function (number, theFunction) {
   theFunction(++number);
 };
-
-exports.addMeMaybe = addMeFunc;
